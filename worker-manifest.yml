@@ -1,0 +1,17 @@
+--- 
+applications: 
+  .: 
+    framework: 
+      name: standalone
+      info: 
+        mem: 64M
+        description: Standalone Application
+        exec: 
+    runtime: ruby18
+    command: bundle exec rake VERBOSE=true QUEUE=default resque:work
+    url: 
+    instances: 1
+    services: 
+      work-queue: 
+        type: redis
+    mem: 128M

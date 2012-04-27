@@ -1,0 +1,14 @@
+--- 
+applications: 
+  .: 
+    framework: 
+      name: rack
+      info: 
+        mem: 128M
+        description: Rack Application
+        exec: 
+    mem: 128M
+    instances: 1
+    services: 
+      work-queue: 
+        type: redis
